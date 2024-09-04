@@ -44,7 +44,6 @@ export function freezeRows(tableElement, rows = [], fillCellBackground = true) {
 				}
 			}
 			nextTop += tableRow.getBoundingClientRect().height;
-			console.log(nextTop);
 		} else {
 			const tableRow = tableRows[row];
 			for (const tableData of tableRow.childNodes) {

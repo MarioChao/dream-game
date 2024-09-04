@@ -1,0 +1,16 @@
+:root {
+	--navigation-bar-height: 75px;
+}
+
+.navbar {
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+	height: var(--navigation-bar-height);
+	top: 0;
+	z-index: 3520;
+}
+
+.navbar-body {
+	margin-top: calc(16px + var(--navigation-bar-height));
+}
