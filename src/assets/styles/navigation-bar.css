@@ -1,11 +1,12 @@
 :root {
 	--navigation-bar-height: 75px;
+	--navigation-bar-border-width: 3px;
 }
 
 .navbar {
 	overflow: hidden;
 	position: fixed;
-	border-bottom: solid 3px black;
+	border-bottom: solid var(--navigation-bar-border-width) black;
 	margin-left: -50%;
 	width: 200%;
 	height: var(--navigation-bar-height);
@@ -14,5 +15,5 @@
 }
 
 .navbar-body {
-	margin-top: calc(16px + var(--navigation-bar-height));
+	margin-top: calc(16px + var(--navigation-bar-border-width) + var(--navigation-bar-height));
 }
