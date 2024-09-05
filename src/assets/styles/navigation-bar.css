@@ -5,7 +5,9 @@
 .navbar {
 	overflow: hidden;
 	position: fixed;
-	width: 100%;
+	border-bottom: solid 3px black;
+	margin-left: -50%;
+	width: 200%;
 	height: var(--navigation-bar-height);
 	top: 0;
 	z-index: 3520;
