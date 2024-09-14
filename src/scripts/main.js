@@ -23,17 +23,20 @@ function initializePieHikingMaps() {
 		const tableMapId = document.createElement("th");
 		const tableMapName = document.createElement("th");
 		const tableMapLink = document.createElement("th");
+		const tableMapCreator = document.createElement("th");
 
 		// Modify content
 		tableRow.style.backgroundColor = "LightGoldenRodYellow";
 		tableMapId.textContent = "Index";
 		tableMapName.textContent = "Map";
 		tableMapLink.textContent = "Link";
+		tableMapCreator.textContent = "Creator";
 
 		// Build row
 		tableRow.appendChild(tableMapId);
 		tableRow.appendChild(tableMapName);
 		tableRow.appendChild(tableMapLink);
+		tableRow.appendChild(tableMapCreator);
 
 		// Append row
 		pieHikingMapsTable.appendChild(tableRow);
@@ -50,6 +53,7 @@ function initializePieHikingMaps() {
 		const tableMapName = document.createElement("td");
 		const tableMapLink = document.createElement("td");
 		const mapHyperlink = document.createElement("a");
+		const tableMapCreator = document.createElement("td");
 
 		// Modify hyperlink
 		mapHyperlink.textContent = "hike";
@@ -60,12 +64,17 @@ function initializePieHikingMaps() {
 		tableRow.style.backgroundColor = (mapId % 2 == 0) ? "BlanchedAlmond" : "Beige";
 		tableMapId.textContent = mapId + 1;
 		tableMapName.textContent = map.name;
+		tableMapCreator.textContent = map.creator;
+
+		// Modify style
+		tableRow.style.fontSize = "14px";
 
 		// Build row
 		tableMapLink.appendChild(mapHyperlink);
 		tableRow.appendChild(tableMapId);
 		tableRow.appendChild(tableMapName);
 		tableRow.appendChild(tableMapLink);
+		tableRow.appendChild(tableMapCreator);
 
 		// Append row
 		pieHikingMapsTable.appendChild(tableRow);
