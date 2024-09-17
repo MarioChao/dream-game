@@ -1,11 +1,22 @@
 // Imports
 
-import { pieHikeGameList } from "https://mariochao.github.io/heart-pie-app/src/scripts/pie-hiking-data.js";
 import { freezeRows } from "./table-utility.js";
+
+// Variables
+
+let pieHikeGameList = []
 
 // Functions
 
-function initializePieHikingMaps() {
+async function updatePieHikeGames() {
+	const fetchResponse = await fetch("https://mariochao.github.io/dream-game/src/assets/data/pie-hiking-maps.json");
+	pieHikeGameList = await fetchResponse.json();
+}
+
+async function initializePieHikingMaps() {
+	// Update pie hiking games
+	await updatePieHikeGames();
+
 	// Modify text
 	const pieHikingMapsText = document.getElementById("pie-hiking-maps-text");
 	pieHikingMapsText.textContent = `Pie Hiking Maps (${pieHikeGameList.length})`;
