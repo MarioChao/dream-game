@@ -1,3 +1,5 @@
+// Main
+
 // Imports
 
 import { freezeRows } from "./table-utility.js";
