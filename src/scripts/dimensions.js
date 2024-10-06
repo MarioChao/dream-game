@@ -24,8 +24,12 @@ function updateClockRadians() {
 	const minutes = (hours % 1) * 60;
 
 	// Create display string
+	const numberFormatOptions = Intl.NumberFormat(
+		undefined,
+		{minimumIntegerDigits: 2, minimumFractionDigits: 2, maximumFractionDigits: 2}
+	);
 	const displayHours = Math.floor(hours).toString().padStart(2, 0);
-	const displayMinutes = Math.floor(minutes).toString().padStart(2, 0);
+	const displayMinutes = numberFormatOptions.format(minutes).toString();
 	const result = `${displayHours}:${displayMinutes}`;
 
 	// Update
