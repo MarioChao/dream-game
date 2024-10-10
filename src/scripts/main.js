@@ -2,107 +2,90 @@
 
 // Imports
 
-import { freezeRows } from "./table-utility.js";
 
 // Variables
 
-let pieHikeGameList = []
+const pieHikerBadgeList = [
+	{
+		name: "Novice Pie Hiker",
+		link: "https://www.roblox.com/badges/2124804350/",
+		image: "./src/assets/images/badge-novice-pie-hiker.png",
+	},
+	{
+		name: "Intermediary Pie Hiker",
+		link: "https://www.roblox.com/badges/2124874992/",
+		image: "./src/assets/images/badge-intermediary-pie-hiker.png",
+	},
+	{
+		name: "Certified Pie Hiker",
+		link: "https://www.roblox.com/badges/2126097921/",
+		image: "./src/assets/images/badge-certified-pie-hiker.png",
+	},
+]
 
-// Functions
+// Local functions
 
-async function updatePieHikeGames() {
-	const fetchResponse = await fetch("https://mariochao.github.io/dream-game/src/assets/data/pie-hiking-maps.json");
-	pieHikeGameList = await fetchResponse.json();
-}
+function initializePiHikerBadges() {
+	// Get element
+	const pieHikerBadgesTable = document.getElementById("pie-hiker-badges");
 
-async function initializePieHikingMaps() {
-	// Update pie hiking games
-	await updatePieHikeGames();
-
-	// Modify text
-	const pieHikingMapsText = document.getElementById("pie-hiking-maps-text");
-	pieHikingMapsText.textContent = `Pie Hiking Maps (${pieHikeGameList.length})`;
-
-	// Get table
-	const pieHikingMapsTable = document.getElementById("pie-hiking-maps-table");
-
-	// Clear table
-	pieHikingMapsTable.textContent = "";
+	// Clear content
+	pieHikerBadgesTable.textContent = "";
 
 	// Add header
 	{
 		// Create row
 		const tableRow = document.createElement("tr");
-		const tableMapId = document.createElement("th");
-		const tableMapName = document.createElement("th");
-		const tableMapLink = document.createElement("th");
-		const tableMapCreator = document.createElement("th");
+		const tableBadgeName = document.createElement("th");
+		const tableBadgeIcon = document.createElement("th");
 
 		// Modify content
-		tableRow.style.backgroundColor = "LightGoldenRodYellow";
-		tableMapId.textContent = "Index";
-		tableMapName.textContent = "Map";
-		tableMapLink.textContent = "Link";
-		tableMapCreator.textContent = "Creator";
+		tableBadgeName.textContent = "Name";
+		tableBadgeIcon.textContent = "Icon";
 
 		// Build row
-		tableRow.appendChild(tableMapId);
-		tableRow.appendChild(tableMapName);
-		tableRow.appendChild(tableMapLink);
-		tableRow.appendChild(tableMapCreator);
+		tableRow.appendChild(tableBadgeName);
+		tableRow.appendChild(tableBadgeIcon);
 
 		// Append row
-		pieHikingMapsTable.appendChild(tableRow);
+		pieHikerBadgesTable.appendChild(tableRow);
 	}
 
-	// Maps
-	for (let mapId = 0; mapId < pieHikeGameList.length; mapId++) {
-		// Get info
-		const map = pieHikeGameList[mapId];
-
+	// Badges
+	for (const badge of pieHikerBadgeList) {
 		// Create row
 		const tableRow = document.createElement("tr");
-		const tableMapId = document.createElement("td");
-		const tableMapName = document.createElement("td");
-		const tableMapLink = document.createElement("td");
-		const mapHyperlink = document.createElement("a");
-		const tableMapCreator = document.createElement("td");
+		const tableBadgeName = document.createElement("td");
+		const tableBadgeIcon = document.createElement("td");
+		const badgeLink = document.createElement("a");
+		const badgeImage = document.createElement("img");
 
 		// Modify hyperlink
-		mapHyperlink.textContent = "hike";
-		mapHyperlink.href = map.link;
-		mapHyperlink.target = "_blank";
+		badgeLink.href = badge.link;
+		badgeLink.target = "_blank";
 
 		// Modify content
-		tableRow.style.backgroundColor = (mapId % 2 == 0) ? "BlanchedAlmond" : "Beige";
-		tableMapId.textContent = mapId + 1;
-		tableMapName.textContent = map.name;
-		tableMapCreator.textContent = map.creator;
-
-		// Modify style
-		tableRow.style.fontSize = "14px";
+		tableBadgeName.textContent = badge.name;
+		badgeImage.src = badge.image;
+		badgeImage.setAttribute("height", "64px");
 
 		// Build row
-		tableMapLink.appendChild(mapHyperlink);
-		tableRow.appendChild(tableMapId);
-		tableRow.appendChild(tableMapName);
-		tableRow.appendChild(tableMapLink);
-		tableRow.appendChild(tableMapCreator);
+		badgeLink.appendChild(badgeImage);
+		tableBadgeIcon.appendChild(badgeLink);
+		tableRow.appendChild(tableBadgeName);
+		tableRow.appendChild(tableBadgeIcon);
 
 		// Append row
-		pieHikingMapsTable.appendChild(tableRow);
+		pieHikerBadgesTable.appendChild(tableRow);
 	}
-
-	// Freeze top row
-	freezeRows(pieHikingMapsTable, [0]);
 }
 
-function initializePieHiking() {
-	initializePieHikingMaps();
+function initializeDreamGame() {
+	initializePiHikerBadges();
 }
 
 function onDOMContentLoaded() {
-	initializePieHiking();
+	initializeDreamGame();
 }
 
 // Calling / events
