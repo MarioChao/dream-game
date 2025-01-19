@@ -67,7 +67,7 @@ function initializePiHikerBadges() {
 		// Modify content
 		tableBadgeName.textContent = badge.name;
 		badgeImage.src = badge.image;
-		badgeImage.setAttribute("height", "64px");
+		badgeImage.setAttribute("height", "64");
 
 		// Build row
 		badgeLink.appendChild(badgeImage);
