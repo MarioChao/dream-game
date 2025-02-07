@@ -11,7 +11,7 @@ let pieHikeGameList = []
 // Local functions
 
 async function updatePieHikeGames() {
-	const fetchResponse = await fetch("/src/assets/data/pie-hiking-maps.json");
+	const fetchResponse = await fetch("../src/assets/data/pie-hiking-maps.json");
 	pieHikeGameList = await fetchResponse.json();
 }
 
