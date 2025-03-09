@@ -17,7 +17,7 @@ async function updatePieHikeGames() {
 
 // Initialize functions
 
-async function initializePieHikingMaps() {
+async function initPHMaps() {
 	// Update pie hiking games
 	await updatePieHikeGames();
 
@@ -36,8 +36,8 @@ async function initializePieHikingMaps() {
 		// Create row
 		const tableRow = document.createElement("tr");
 		const tableMapId = document.createElement("th");
-		const tableMapName = document.createElement("th");
 		const tableMapLink = document.createElement("th");
+		const tableMapName = document.createElement("th");
 		const tableMapCreator = document.createElement("th");
 
 		// Modify content
@@ -49,8 +49,8 @@ async function initializePieHikingMaps() {
 
 		// Build row
 		tableRow.appendChild(tableMapId);
-		tableRow.appendChild(tableMapName);
 		tableRow.appendChild(tableMapLink);
+		tableRow.appendChild(tableMapName);
 		tableRow.appendChild(tableMapCreator);
 
 		// Append row
@@ -65,9 +65,9 @@ async function initializePieHikingMaps() {
 		// Create row
 		const tableRow = document.createElement("tr");
 		const tableMapId = document.createElement("td");
-		const tableMapName = document.createElement("td");
 		const tableMapLink = document.createElement("td");
 		const mapHyperlink = document.createElement("a");
+		const tableMapName = document.createElement("td");
 		const tableMapCreator = document.createElement("td");
 
 		// Modify hyperlink
@@ -87,8 +87,8 @@ async function initializePieHikingMaps() {
 		// Build row
 		tableMapLink.appendChild(mapHyperlink);
 		tableRow.appendChild(tableMapId);
-		tableRow.appendChild(tableMapName);
 		tableRow.appendChild(tableMapLink);
+		tableRow.appendChild(tableMapName);
 		tableRow.appendChild(tableMapCreator);
 
 		// Append row
@@ -99,12 +99,12 @@ async function initializePieHikingMaps() {
 	freezeRows(pieHikingMapsTable, [0]);
 }
 
-function initializePieHiking() {
-	initializePieHikingMaps();
+function init() {
+	initPHMaps();
 }
 
 function onDOMContentLoaded() {
-	initializePieHiking();
+	init();
 }
 
 // Calling / events
