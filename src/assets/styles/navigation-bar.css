@@ -14,6 +14,15 @@
 	z-index: 3520;
 }
 
+.navbar-2 {
+	overflow: hidden;
+	position: sticky;
+	border-bottom: solid var(--navigation-bar-border-width) black;
+	height: var(--navigation-bar-height);
+	top: 0;
+	z-index: 3520;
+}
+
 .navbar-body {
 	margin-top: calc(16px + var(--navigation-bar-border-width) + var(--navigation-bar-height));
 }
