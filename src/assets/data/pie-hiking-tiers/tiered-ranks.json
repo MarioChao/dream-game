@@ -1,0 +1,60 @@
+[
+	{
+		"rankTitle": "S+",
+		"conditions": [
+			{"badgeTier": 4, "minimumBadges": 5},
+			{"badgeTier": 3, "minimumBadges": 15},
+			{"badgeTier": 2, "minimumBadges": 15},
+			{"badgeTier": 1, "minimumBadges": 15}
+		]
+	},
+	{
+		"rankTitle": "S",
+		"conditions": [
+			{"badgeTier": 4, "minimumBadges": 1},
+			{"badgeTier": 3, "minimumBadges": 10},
+			{"badgeTier": 2, "minimumBadges": 10},
+			{"badgeTier": 1, "minimumBadges": 10}
+		]
+	},
+	{
+		"rankTitle": "A+",
+		"conditions": [
+			{"badgeTier": 3, "minimumBadges": 5},
+			{"badgeTier": 2, "minimumBadges": 10},
+			{"badgeTier": 1, "minimumBadges": 10}
+		]
+	},
+	{
+		"rankTitle": "A",
+		"conditions": [
+			{"badgeTier": 3, "minimumBadges": 1},
+			{"badgeTier": 2, "minimumBadges": 5},
+			{"badgeTier": 1, "minimumBadges": 10}
+		]
+	},
+	{
+		"rankTitle": "Master",
+		"conditions": [
+			{"badgeTier": 2, "minimumBadges": 5},
+			{"badgeTier": 1, "minimumBadges": 5}
+		]
+	},
+	{
+		"rankTitle": "Pro",
+		"conditions": [
+			{"badgeTier": 2, "minimumBadges": 1},
+			{"badgeTier": 1, "minimumBadges": 5}
+		]
+	},
+	{
+		"rankTitle": "Novice",
+		"conditions": [
+			{"badgeTier": 1, "minimumBadges": 3}
+		]
+	},
+	{
+		"rankTitle": "Beginner",
+		"conditions": []
+	}
+]
