@@ -28,3 +28,4 @@ Can add
 * https://www.roblox.com/badges/3639745985729293/Reparations-for-my-Aspirations
 * Badges from https://www.roblox.com/games/121391409664803/you-dont-wanna-see-me-pie-hike
 * https://www.roblox.com/badges/2886925383902957/certified-pie-hiker-of-philosophy
+* https://www.roblox.com/badges/2128018858/Pie-Hikers-Fever-Dream
