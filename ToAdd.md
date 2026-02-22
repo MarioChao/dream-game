@@ -8,6 +8,8 @@ Can add
 * (private) https://www.roblox.com/games/71902922933528/Stellas-pie-hiking-training
 * (private) https://www.roblox.com/games/123046026832923/Pie-hikinh
 * https://www.roblox.com/games/92969991461691/Pie-Difficulty-Chart
+* https://www.roblox.com/games/140121834237082/To-The-Sky-I-Leave-My-Name (?)
+* https://www.roblox.com/games/74336084240070/Incessant-Dream
 
 A bit incomplete
 * (private) https://www.roblox.com/games/87348802623063/PIE-HIKE
@@ -23,8 +25,5 @@ A bit incomplete
 ## Pie Hiking Badges
 
 Can add
-* Badges from https://www.roblox.com/games/18782245379/A-branch-inside-your-dreams
 * Badges from https://www.roblox.com/games/92969991461691/Pie-Difficulty-Chart
-* Badges from https://www.roblox.com/games/121391409664803/you-dont-wanna-see-me-pie-hike
-* https://www.roblox.com/badges/2128018858/Pie-Hikers-Fever-Dream
-* Badges from https://www.roblox.com/badges/3746604785699388/Pie-Liker
+* https://www.roblox.com/badges/3746604785699388/Pie-Liker
